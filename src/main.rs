@@ -1,7 +1,6 @@
-use std::io::Error;
-use zero2prod::run;
+use zero2prod::startup::run;
 
 #[tokio::main]
-async fn main() -> Result<(), Error> {
+async fn main() -> Result<(), std::io::Error> {
     run("127.0.0.1:8000")?.await
 }
