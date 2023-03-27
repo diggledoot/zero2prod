@@ -14,7 +14,14 @@ name = "zero2prod"
 [dependencies]
 actix-web = "4"
 serde = { version = "1.0.158", features = ["derive"] }
-sqlx = { version = "0.6.3", default-features = false, features = ["runtime-tokio-rustls", "macros", "postgres", "uuid", "chrono", "migrate"] }
+sqlx = { version = "0.6.3", default-features = false, features = [
+    "runtime-tokio-rustls", #currently soft-deprecated TODO: Change this when 0.7
+    "macros",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate",
+] }
 tokio = { version = "1.26.0", features = ["macros", "rt-multi-thread"] }
 
 [dev-dependencies]
